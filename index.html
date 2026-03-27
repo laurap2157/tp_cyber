@@ -1,31 +1,122 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TP Cybersécurité</title>
-    <link rel="stylesheet" href="/assets/style/bootstrap.min.css">
-</head>
-<body>
-<div class="container text-center mt-4">
-  <div class="row align-items-start gap-3">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TP Cybersécurité</title>
+        <link rel="stylesheet" href="/assets/style/bootstrap.min.css">
+    </head>
+    <body>
+    <header class="text-center py-4">
+        <p class="cyber-title mb-0 fs-1">// AGENCE DE RENSEIGNEMENT //</p>
+    </header>
+    <div class="container mt-2">
+        <div class="row align-items-start gap-3">
+            <div class="col">
+                <div class="cyber-card p-4">
+                    <h2 class="cyber-title mb-1 fs-6">
+                        <span class="text-secondary">[01]</span> MODULE DE CHIFFREMENT
+                    </h2>
+
+                    <hr class="cyber-divider mb-4">
+
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label text-secondary font-monospace" for="messageClair">
+                                > SAISIR MESSAGE SECRET :
+                            </label>
+                            <textarea
+                                class="form-control cyber-input"
+                                id="messageClair"
+                                rows="3">
+                            </textarea>
+                        </div>
+                        <div class="d-flex gap-2 flex-wrap">
+                            <button type="button" class="btn btn-cyber-cyan px-4">
+                                ⚡ CHIFFRER
+                            </button>
+                            <button type="button" class="btn btn-cyber-pink px-4">
+                                🔓 DÉCHIFFRER
+                            </button>
+                        </div>
+                    </form>
+
+                    <hr class="cyber-divider my-4">
+                
+                    <div class="mb-1 d-flex justify-content-between align-items-center">
+                        <span class="text-secondary font-monospace font-size:.8rem">
+                            > RÉSULTAT :
+                        </span>
+                    </div>
+                    <div class="cyber-output p-3 font-monospace" id="resultat">
+                        <span class="text-secondary">En attente d'un message...</span>
+                    </div>
+
+                    <hr class="cyber-divider my-4">
+
+                    <div class="cyber-info p-3 font-monospace">
+                        <p class="mb-1 color: var(--neon-pink); font-size:.8rem">
+                            ⚙ NOTE TECHNIQUE
+                        </p>
+                        <p class="mb-0 font-size:.78rem">
+                            L'algorithme applique [explication à rédiger] puis encode
+                            le résultat en Base64 pour garantir la portabilité du message chiffré.
+                            Réversible via la fonction inverse.
+                        </p>
+                    </div>
+                </div>
+            </div>
     <div class="col">
-        <h1>Module de chiffrement</h1>
-        <form class="mb-3" action="">
-            <label class="mb-2" for="">Saisissez votre message secret !</label>
-            <br>
-            <textarea class="form-control bg-dark text-light" name="" id="" cols="40" rows="2"></textarea>
-        </form>
-        <span class="d-block mb-2">X</span>
-        <div>explication</div>
+        <div class="cyber-card p-4">
+            <h2 class="cyber-title mb-1 fs-6">
+                <span class="text-secondary">[02]</span> DÉCHIFFREMENT — FORCE BRUTE
+            </h2>
+            <hr class="cyber-divider mb-4">
+            <div class="mb-3">
+                <p class="text-secondary font-monospace mb-1 font-size:.8rem">
+                    > MESSAGE INTERCEPTÉ :
+                </p>
+                <div class="cyber-output p-3 font-monospace" id="messageIntercepte">
+                    QJ HTIJ XJHWJY JXY HFMJ IFSX QJ KNHMNJW OFAFXHWNUY
+                </div>
+            </div>
+            <button type="button" class="btn btn-cyber-pink w-100 mb-3" id="btnForceBrute">
+                💥 LANCER LA FORCE BRUTE
+            </button>
+            <p class="text-secondary font-monospace mb-4 font-size:.72rem">
+                > Génère les 25 décalages possibles et détecte automatiquement la meilleure correspondance.
+            </p>
+
+            <hr class="cyber-divider mb-3">
+
+            <div class="mb-2 d-flex justify-content-between align-items-center">
+                <span class="text-secondary font-monospace font-size:.8rem">
+                    > RÉSULTATS :
+                </span>
+            </div>
+            <div id="resultats-brute"
+                 class="font-monospace max-height: 420px; overflow-y: auto;">
+
+                <!--
+                    Exemple de ligne NORMALE (générée par JS) :
+                    <div class="brute-item p-2 mb-1">
+                        <span class="text-secondary font-size:.75rem">[DÉC. 01]</span>
+                        <span class="ms-2">RI UKNJ YJHXJY JZY ...</span>
+                    </div>
+
+                    Exemple de ligne SURLIGNÉE — résultat probable (mis par le JS) :
+                    <div class="brute-item brute-match p-2 mb-1">
+                        <span class="match-badge me-2">✔ PROBABLE</span>
+                        <span class="text-secondary font-size:.75rem">[DÉC. 05]</span>
+                        <span class="ms-2">LE CODE SECRET EST CACHÉ DANS LE FICHIER JAVASCRIPT</span>
+                    </div>
+                -->
+
+                <div class="text-secondary font-monospace p-2 font-size:.8rem">
+                    En attente du lancement...
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col">
-        <h1>Nous avons intercepté un message ennemi !</h1>
-        <span class="d-block mb-3">QJ HTIJ XJHWJY JXY HFMJ IFSX QJ KNHMNJW OFAFXHWNUY</span>
-        <h2>Nous pourrions l'interpréter ainsi...</h2>
-        <span class="d-block">Y</span>
-    </div>
-  </div>
-</div>
 </body>
 </html>
