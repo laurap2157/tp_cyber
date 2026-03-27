@@ -38,6 +38,16 @@ function chiffrerMessage (texte) {
 J'ai juste changé ma variable k pour qu'elle soit l'inverse de celle de la fonction de chiffrement (k * k-1 congru à 1 modulo 26)
 Pour 7, k-1 est égal à 15 */
 
+var dechiffrer = document.querySelector("#btnDechiffrer");
+
+function lancerDechiffrement() {
+    var texte = document.querySelector("#messageClair").value;
+    var messageDechiffre = dechiffrerMessage(texte);
+    resultat.innerText = messageDechiffre;
+}
+
+dechiffrer.addEventListener("click", lancerDechiffrement);
+
 function dechiffrerMessage (texte) {
     var k = 15;
     var resultat = "";
