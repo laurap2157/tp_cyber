@@ -1,3 +1,5 @@
+// Exercice 1 //
+
 // On commence par récupérer ce que l'utilisateur tape dans le text area Saisir un message secret //
 
 var resultat = document.querySelector("#resultat");
@@ -67,3 +69,8 @@ function dechiffrerMessage (texte) {
     return resultat;
 }
 
+// Exercice 2 //
+
+function decalerCesar {
+    
+}
