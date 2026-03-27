@@ -33,10 +33,10 @@
                         </div>
                         <div class="d-flex gap-2 flex-wrap">
                             <button type="button" class="btn btn-cyber-cyan px-4">
-                                ⚡ CHIFFRER
+                                CHIFFRER
                             </button>
                             <button type="button" class="btn btn-cyber-pink px-4">
-                                🔓 DÉCHIFFRER
+                                DÉCHIFFRER
                             </button>
                         </div>
                     </form>
@@ -56,12 +56,12 @@
 
                     <div class="cyber-info p-3 font-monospace">
                         <p class="mb-1 color: var(--neon-pink); font-size:.8rem">
-                            ⚙ NOTE TECHNIQUE
+                            NOTE TECHNIQUE
                         </p>
-                        <p class="mb-0 font-size:.78rem">
-                            L'algorithme applique [explication à rédiger] puis encode
-                            le résultat en Base64 pour garantir la portabilité du message chiffré.
-                            Réversible via la fonction inverse.
+                        <p class="mb-0 font-size:.78rem text-justify">
+                            Nous utilisons ici un chiffrement multiplicatif selon la formule r = (k * x) modulo 26. Ici, x est la position de la lettre dans l'alphabet -1 (A = 0, Z=25), k la clé de chiffrement, et r la position de la lettre chiffrée. 
+                            Pour obtenir une bonne clé de chiffrage, il est important qu'il s'agisse d'un nombre qui soit premier avec 26 (pcgd(k, 26) = 1). Nous avons choisi ici que la clé k soit 7. 
+                            Ensuite, il a fallu trouver l'inverse de 7 pour déchiffrer. La clé de déchiffrage doit donc être k * k-1 congru à 1 mod 26. K-1 est 15. Le déchiffrage applique la même formule en utilisant 15 à la place de 7. 
                         </p>
                     </div>
                 </div>
@@ -81,7 +81,7 @@
                 </div>
             </div>
             <button type="button" class="btn btn-cyber-pink w-100 mb-3" id="btnForceBrute">
-                💥 LANCER LA FORCE BRUTE
+                LANCER LA FORCE BRUTE
             </button>
             <p class="text-secondary font-monospace mb-4 font-size:.72rem">
                 > Génère les 25 décalages possibles et détecte automatiquement la meilleure correspondance.
@@ -91,7 +91,7 @@
 
             <div class="mb-2 d-flex justify-content-between align-items-center">
                 <span class="text-secondary font-monospace font-size:.8rem">
-                    > RÉSULTATS :
+                    > RÉSULTAT :
                 </span>
             </div>
             <div id="resultats-brute"
