@@ -1,3 +1,16 @@
+// On commence par récupérer ce que l'utilisateur tape dans le text area Saisir un message secret //
+
+var resultat = document.querySelector("#resultat");
+var chiffrer = document.querySelector("#btnChiffrer");
+
+function lancerChiffrement() {
+    var texte = document.querySelector("#messageClair").value;
+    var messageChiffre = chiffrerMessage(texte);
+    resultat.innerText = messageChiffre;
+}
+
+chiffrer.addEventListener("click", lancerChiffrement);
+
 /* Construction de la fonction de chiffrement du message, prenant en compte le positionnement Ascii, 
 la transformation en majuscule pour que les minuscules soient prises en compte dans mon modulo 26
 et la gestion des espaces (qui ne seront pas codés) */
@@ -43,3 +56,4 @@ function dechiffrerMessage (texte) {
 
     return resultat;
 }
+
