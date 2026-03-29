@@ -119,6 +119,10 @@
             animation: pulse-match 2s infinite;
         }
 
+        #resultats-brute:empty {
+            display: none;
+        }
+
         .match-badge {
             color: var(--neon-green);
             font-size: .7rem;

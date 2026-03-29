@@ -85,7 +85,7 @@
                 LANCER LA FORCE BRUTE
             </button>
             <p class="text-secondary font-monospace mb-4 font-size:.72rem">
-                > Génère les 25 décalages possibles et détecte automatiquement la meilleure correspondance.
+                > Génère les 25 décalages possibles.
             </p>
 
             <hr class="cyber-divider mb-3">
@@ -95,29 +95,9 @@
                     > RÉSULTAT :
                 </span>
             </div>
-            <div id="resultats-brute"
-                 class="font-monospace max-height: 420px; overflow-y: auto;">
-
-                <!--
-                    Exemple de ligne NORMALE (générée par JS) :
-                    <div class="brute-item p-2 mb-1">
-                        <span class="text-secondary font-size:.75rem">[DÉC. 01]</span>
-                        <span class="ms-2">RI UKNJ YJHXJY JZY ...</span>
-                    </div>
-
-                    Exemple de ligne SURLIGNÉE — résultat probable (mis par le JS) :
-                    <div class="brute-item brute-match p-2 mb-1">
-                        <span class="match-badge me-2">✔ PROBABLE</span>
-                        <span class="text-secondary font-size:.75rem">[DÉC. 05]</span>
-                        <span class="ms-2">LE CODE SECRET EST CACHÉ DANS LE FICHIER JAVASCRIPT</span>
-                    </div>
-                -->
-
-                <div class="text-secondary font-monospace p-2 font-size:.8rem">
-                    En attente du lancement...
-                </div>
+            <div class="cyber-output p-3 font-monospace" id="resultats-brute">
+                <span class="text-secondary">En attente du lancement...</span>
             </div>
-        </div>
     </div>
     <script src="/assets/script/script.js"></script>
 </body>
