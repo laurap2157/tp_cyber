@@ -8,7 +8,7 @@ var chiffrer = document.querySelector("#btnChiffrer");
 function lancerChiffrement() {
     var texte = document.querySelector("#messageClair").value;
     var messageChiffre = chiffrerMessage(texte);
-    resultat.innerText = messageChiffre;
+    resultat.innerHTML = messageChiffre;
 }
 
 chiffrer.addEventListener("click", lancerChiffrement);
@@ -45,7 +45,7 @@ var dechiffrer = document.querySelector("#btnDechiffrer");
 function lancerDechiffrement() {
     var texte = document.querySelector("#messageClair").value;
     var messageDechiffre = dechiffrerMessage(texte);
-    resultat.innerText = messageDechiffre;
+    resultat.innerHTML = messageDechiffre;
 }
 
 dechiffrer.addEventListener("click", lancerDechiffrement);
@@ -75,7 +75,7 @@ var btnForceBrute = document.querySelector("#btnForceBrute");
 var zoneResultats = document.querySelector("#resultats-brute");
 
 function messageCesar () {
-    zoneResultats.innerText = "";
+    zoneResultats.innerHTML = "";
     var decalage = 1;
     var message = "QJ HTIJ XJHWJY JXY HFHMJ IFSX QJ KNHMNJW OFAFXHWNUY";
 
@@ -95,7 +95,7 @@ function messageCesar () {
             }
         }
 
-        zoneResultats.innerText += texteDecode + "\n";
+        zoneResultats.innerHTML += texteDecode + "<br>";
         decalage += 1;
     }
 }
