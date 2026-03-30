@@ -77,9 +77,10 @@ var zoneResultats = document.querySelector("#resultats-brute");
 function messageCesar () {
     zoneResultats.innerHTML = "";
     var decalage = 1;
-    var message = "QJ HTIJ XJHWJY JXY HFHMJ IFSX QJ KNHMNJW OFAFXHWNUY";
+    var message = "QJ HTIJ XJHWJY JXY HFHMJ IFSX QJ KNHMNJW OFAFXHWNUY"; // J'ai rajouté un H entre le F et le M... :) //
 
-// Grâce à un décalage dans l'alphabet et à l'aide du code Ascii, on génère les 25 possibilités de déchiffrement du message codé en César, tout en gérant aussi les espaces //
+/* Grâce à un décalage dans l'alphabet et à l'aide du code Ascii, on génère les 25 possibilités de déchiffrement du message codé en César, tout en gérant aussi les espaces
+En revanche, je n'ai pas trouvé le code secret dans le fichier JavaScript... ^^ */
 
     while (decalage <= 25) {
         var texteDecode = "";
